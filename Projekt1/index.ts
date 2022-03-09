@@ -3,8 +3,8 @@ const app = express()
 app.get('/', function (req, res) {  
   const num1 = +req.query.num1
   const num2 = +req.query.num2
-  const operation = req.query.operation;
-  switch(operation){
+  const op = req.query.operation;
+  switch(op){
     case "add" : 
     const add = num1 + num2
     res.send(add.toString())
